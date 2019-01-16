@@ -79,6 +79,17 @@ namespace BeatSaverDownloader
             {
                 PlaylistsCollection.ReloadPlaylists();
             }
+
+            //todo: make this not hardcoded to using oculus button ids
+            if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.JoystickButton2))
+            {
+                PluginUI.Instance.moreSongsFlowCoordinator?._moreSongsListViewController_pageDownPressed();
+            }
+
+            if (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.JoystickButton3))
+            {
+                PluginUI.Instance.moreSongsFlowCoordinator?._moreSongsListViewController_pageUpPressed();
+            }
         }
     }
 }

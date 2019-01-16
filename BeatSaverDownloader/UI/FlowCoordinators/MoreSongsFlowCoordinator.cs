@@ -193,7 +193,7 @@ namespace BeatSaverDownloader.UI.FlowCoordinators
             _moreSongsListViewController.SelectTopButtons(TopButtonsState.Select);
         }
 
-        private void _moreSongsListViewController_pageDownPressed()
+        public void _moreSongsListViewController_pageDownPressed()
         {
             currentPage++;
             if(string.IsNullOrEmpty(currentSearchRequest))
@@ -203,7 +203,7 @@ namespace BeatSaverDownloader.UI.FlowCoordinators
             _moreSongsListViewController.TogglePageUpDownButtons(true, true);
         }
 
-        private void _moreSongsListViewController_pageUpPressed()
+        public void _moreSongsListViewController_pageUpPressed()
         {
             if (currentPage > 0)
             {
@@ -303,5 +303,4 @@ namespace BeatSaverDownloader.UI.FlowCoordinators
             _moreSongsListViewController.SetLoadingState(false);
         }
     }
-
 }
